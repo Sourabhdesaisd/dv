@@ -1,0 +1,49 @@
+s1(19Feb2019:01:28:29):  irun -access +rwc fifo.v fifo_tb.v 
+s2(19Feb2019:01:28:41):  irun -access +rwc fifo.v fifo_tb.v 
+s3(19Feb2019:01:37:13):  irun -access +rwc fifo.v fifo_tb.v 
+s4(19Feb2019:01:37:58):  irun -sv fifo.v fifo_tb.v 
+s5(19Feb2019:01:40:34):  irun -sv fifo.v fifo_tb.v 
+s6(19Feb2019:01:41:56):  irun -sv fifo.v fifo_tb.v 
+s7(19Feb2019:01:43:42):  irun -sv fifo.v fifo_tb.v 
+s8(19Feb2019:01:46:18):  irun -sv fifo.v fifo_tb.v 
+s9(19Feb2019:01:52:35):  irun -sv fifo.v fifo_tb.v 
+s10(19Feb2019:01:53:04):  irun -sv fifo.v fifo_tb.v 
+s11(19Feb2019:01:53:29):  irun -sv fifo.v fifo_tb.v 
+s12(19Feb2019:02:00:27):  irun -sv fifo.v fifo_tb1.v 
+s13(19Feb2019:02:00:42):  irun -sv fifo.v fifo_tb1.v 
+s14(19Feb2019:02:00:52):  irun -sv fifo.v fifo_tb1.v +test=write_till_full 
+s15(19Feb2019:01:57:01):  irun -sv fifo.v fifo_tb1.v +ALL 
+s16(19Feb2019:01:57:14):  irun -sv fifo.v fifo_tb1.v +alltestes 
+s17(19Feb2019:01:57:56):  irun -sv fifo.v fifo_tb1.v +alltests 
+s18(19Feb2019:02:20:00):  irun -sv fifo.v fifo_tb.v 
+s19(19Feb2019:02:20:21):  irun -sv fifo.v fifo_tb1.v +alltests 
+s20(19Feb2019:02:21:41):  irun -sv fifo.v fifo_tb_1.v 
+s21(19Feb2019:02:21:54):  irun -sv fifo.v fifo_tb_1.v 
+s22(19Feb2019:02:27:01):  irun -sv fifo.v fifo_tb_1.v 
+s23(19Feb2019:02:28:54):  irun -sv fifo.v fifo_tb.v 
+s24(19Feb2019:02:31:11):  irun -sv fifo.v fifo_tb.v 
+s25(19Feb2019:02:32:16):  irun -sv fifo.v fifo_tb.v 
+s26(19Feb2019:02:33:53):  irun -access +rwc fifo.v fifo_tb.v 
+s27(19Feb2019:02:34:01):  irun -sv fifo.v fifo_tb.v 
+s28(19Feb2019:02:35:52):  irun -sv fifo.v fifo_tb.v 
+s29(19Feb2019:02:38:06):  irun -access +rwc fifo.v fifo_tb1.v 
+s30(19Feb2019:02:38:32):  irun -access +rwc fifo.v fifo_tb.sv 
+s31(19Feb2019:02:40:07):  irun -access +rwc fifo.v fifo_tb.sv 
+s32(19Feb2019:02:41:53):  irun -access +rwc fifo.v fifo_b_1.v 
+s33(19Feb2019:02:42:14):  irun -access +rwc fifo.v fifo_tb_1.v 
+s34(19Feb2019:02:44:16):  irun -access +rwc fifo.v fifo_tb_1.v 
+s35(19Feb2019:02:49:57):  irun -access +rwc fifo.v fifo_tb1.v 
+s36(19Feb2019:02:50:08):  irun -access +rwc fifo.v fifo_tb1.sv 
+s37(19Feb2019:02:53:10):  irun -access +rwc fifo.v fifo_tb1.sv 
+s38(19Feb2019:02:54:15):  irun -access +rwc fifo.v fifo_tb1.sv 
+s39(19Feb2019:02:55:23):  irun -access +rwc fifo.v fifo_tb1.sv 
+s40(19Feb2019:02:55:37):  irun -access +rwc fifo.v fifo_tb1.sv 
+s41(19Feb2019:02:56:10):  irun -access +rwc fifo.v fifo_tb1.sv +alltests 
+s42(19Feb2019:02:56:37):  irun -access +rwc fifo.v fifo_tb1.sv +alltests 
+s43(19Feb2019:03:00:16):  irun -access +rwc fifo.v fifo_tb1.sv +write_read_alternation 
+s44(19Feb2019:03:00:40):  irun -access +rwc fifo.v fifo_tb1.sv +test=+write_read_alternation 
+s45(19Feb2019:02:57:10):  irun -access +rwc fifo.v fifo_tb1.sv +test=write_read_alternation 
+s46(19Feb2019:02:59:09):  irun -access +rwc fifo.v fifo_tb1.sv +alltests 
+s47(19Feb2019:03:02:53):  irun -access +rwc fifo.v fifo_tb_1.v 
+s48(19Feb2019:03:21:43):  irun -access +rwc fifo.v fifo_tb1.sv +test=write_read_alternation 
+s49(19Feb2019:03:32:13):  irun -access +rwc fifo.v fifo_tb1.sv +test=write_read_alternation 

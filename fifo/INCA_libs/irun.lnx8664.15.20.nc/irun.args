@@ -1,0 +1,9 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-access
++rwc
+fifo.v
+fifo_tb1.sv
++test=write_read_alternation
