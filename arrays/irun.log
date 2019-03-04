@@ -1,0 +1,188 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 04, 2019 at 16:27:31 IST
+irun
+	-access +rwc
+	assoc_array.sv
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+Recompiling... reason: file './assoc_array.sv' is newer than expected.
+	expected: Mon Mar  4 16:23:22 2019
+	actual:   Mon Mar  4 16:27:30 2019
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+file: assoc_array.sv
+    array.first(index);
+              |
+ncvlog: *W,FUNTSK (assoc_array.sv,83|14): function called as a task without void'().
+    array.last(index);
+             |
+ncvlog: *W,FUNTSK (assoc_array.sv,86|13): function called as a task without void'().
+    array.prev(index);  // Previous index of 9
+             |
+ncvlog: *W,FUNTSK (assoc_array.sv,90|13): function called as a task without void'().
+    array.next(index); // Next index of 10
+             |
+ncvlog: *W,FUNTSK (assoc_array.sv,94|13): function called as a task without void'().
+    a_array.last(index);
+               |
+ncvlog: *W,AAMNSD (assoc_array.sv,166|15): Using indicated method on wildcard associative arrays is non standard.
+    a_array.last(index);
+               |
+ncvlog: *W,FUNTSK (assoc_array.sv,166|15): function called as a task without void'().
+    a_array.prev(index);
+               |
+ncvlog: *W,AAMNSD (assoc_array.sv,170|15): Using indicated method on wildcard associative arrays is non standard.
+    a_array.prev(index);
+               |
+ncvlog: *W,FUNTSK (assoc_array.sv,170|15): function called as a task without void'().
+    a_array.next(index);
+               |
+ncvlog: *W,AAMNSD (assoc_array.sv,174|15): Using indicated method on wildcard associative arrays is non standard.
+    a_array.next(index);
+               |
+ncvlog: *W,FUNTSK (assoc_array.sv,174|15): function called as a task without void'().
+	module worklib.associative_array2:sv
+		errors: 0, warnings: 6
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		associative_array_int
+		associative_array
+		associative_array_example
+		associative_array3
+		associative_array4
+		associative_array2
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		worklib.associative_array2:sv <0x4eccba22>
+			streams:   1, words:  5570
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		          Instances  Unique
+		Modules:          6       6
+		Registers:       18      18
+		Initial blocks:   6       6
+	Writing initial simulation snapshot: worklib.associative_array_int:sv
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+Loading snapshot worklib.associative_array_int:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+Index = 10, Data = aa
+Index = 20, Data = bb
+Index = 40, Data = cc
+Key 30 does not exist
+Marks of Alice = 85
+Marks of Bob   = 90
+Marks of Carol = 78
+Dave not found
+Student: Alice, Marks: 85
+Student: Bob, Marks: 90
+Student: Carol, Marks: 78
+--- After deleting Bob ---
+Student: Alice, Marks: 85
+Student: Carol, Marks: 78
+array[5] = 2
+array[7] = 6
+array[9] = 8
+array[10] = 4
+array[13] = 12
+array[20] = 10
+size = 6, Number of entries = 6 of array
+An element exists at index = 7
+An element doesn't exists at index = 8
+First index of array = 5
+Last index of array = 20
+Prev index of 9 is 7
+Next index of 10 is 13
+After deleting element having index 7
+array[5] = 2
+array[9] = 8
+array[10] = 4
+array[13] = 12
+array[20] = 10
+size = 0 of array
+a_array1[5] = 10
+a_array1[8] = 20
+a_array2[Desai] = 0
+a_array2[Sourabh] = 1
+[Before-Delete] Associative array size is 3
+[After -Delete] Associative array size is 0
+Index 8 exists in a_array
+Last entry is a_array[8] = 16
+prev entry is a_array[4] = 8
+next entry is a_array[8] = 16
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 04, 2019 at 16:27:32 IST  (total: 00:00:01)
