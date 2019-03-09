@@ -5,7 +5,7 @@
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
 -RUNMODE
-assoc_array.sv
+at_arry.sv
 -CDSLIB
 ./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
 -HDLVAR
