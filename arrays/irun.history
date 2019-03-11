@@ -96,3 +96,68 @@ s95(11Mar2019:08:46:47):  irun -sv array_task.sv
 s96(11Mar2019:08:48:25):  irun -sv array_task.sv 
 s97(11Mar2019:08:49:41):  irun -sv array_task.sv 
 s98(11Mar2019:08:51:47):  irun -sv array_task.sv 
+s99(11Mar2019:08:58:27):  irun -sv array_task.sv 
+s100(11Mar2019:08:57:00):  irun -sv array_task.sv 
+s101(11Mar2019:08:58:28):  irun -sv array_task.sv 
+s102(11Mar2019:08:59:34):  irun -sv array_task.sv 
+s103(11Mar2019:09:03:19):  irun -sv array_task.sv 
+s104(11Mar2019:09:05:45):  irun -sv array_task.sv 
+s105(11Mar2019:09:05:55):  irun -sv array_task.sv 
+s106(11Mar2019:09:12:35):  irun -access +rwc array_task.sv 
+s107(11Mar2019:09:12:56):  irun -access +rwc array_task.sv 
+s108(11Mar2019:09:12:59):  irun -sv array_task.sv 
+s109(11Mar2019:09:15:45):  irun -sv array_task.sv 
+s110(11Mar2019:09:17:24):  irun -sv array_task.sv 
+s111(11Mar2019:09:17:46):  irun -sv array_task.sv 
+s112(11Mar2019:09:20:05):  irun -sv array_task.sv 
+s113(11Mar2019:09:20:19):  irun -sv array_task.sv 
+s114(11Mar2019:09:25:21):  irun -sv array_task.sv 
+s115(11Mar2019:09:26:01):  irun -sv array_task.sv 
+s116(11Mar2019:09:26:54):  irun -sv array_task.sv 
+s117(11Mar2019:09:29:37):  irun -sv array_task.sv 
+s118(11Mar2019:09:31:16):  irun -sv array_task.sv 
+s119(11Mar2019:09:32:45):  irun -sv array_task.sv 
+s120(11Mar2019:09:33:17):  irun -sv array_task.sv 
+s121(11Mar2019:09:33:44):  irun -access +rwc array_task.sv 
+s122(11Mar2019:09:36:16):  irun -access +rwc array_task.sv 
+s123(11Mar2019:09:37:35):  irun -access +rwc array_task.sv 
+s124(11Mar2019:09:38:16):  irun -access +rwc array_task.sv 
+s125(11Mar2019:09:38:27):  irun -access +rwc array_task.sv 
+s126(11Mar2019:09:39:34):  irun -access +rwc array_task.sv 
+s127(11Mar2019:09:40:17):  irun -access +rwc array_task.sv 
+s128(11Mar2019:09:41:31):  irun -access +rwc array_task.sv 
+s129(11Mar2019:09:42:08):  irun -access +rwc array_task.sv 
+s130(11Mar2019:09:42:48):  irun -access +rwc array_task.sv 
+s131(11Mar2019:09:43:32):  irun -access +rwc array_task.sv 
+s132(11Mar2019:09:44:10):  irun -access +rwc array_task.sv 
+s133(11Mar2019:09:44:38):  irun -access +rwc array_task.sv 
+s134(11Mar2019:09:45:27):  irun -access +rwc array_task.sv 
+s135(11Mar2019:09:46:41):  irun -access +rwc array_task.sv 
+s136(11Mar2019:09:47:48):  irun -access +rwc array_task.sv 
+s137(11Mar2019:09:49:26):  irun -access +rwc array_task.sv 
+s138(11Mar2019:09:50:31):  irun -access +rwc array_task.sv 
+s139(11Mar2019:09:50:44):  irun -access +rwc array_task.sv 
+s140(11Mar2019:09:52:03):  irun -access +rwc array_task.sv 
+s141(11Mar2019:09:53:19):  irun -access +rwc array_task.sv 
+s142(11Mar2019:09:53:44):  irun -access +rwc array_task.sv 
+s143(11Mar2019:09:55:01):  irun -access +rwc array_task.sv 
+s144(11Mar2019:09:59:11):  irun -access +rwc array_task.sv 
+s145(11Mar2019:10:13:22):  irun -access +rwc array_task.sv 
+s146(11Mar2019:10:15:45):  irun -access +rwc array_task.sv 
+s147(11Mar2019:10:18:04):  irun -access +rwc array_task.sv 
+s148(11Mar2019:10:20:30):  irun -access +rwc array_task.sv 
+s149(11Mar2019:10:23:05):  irun -access +rwc array_task.sv 
+s150(11Mar2019:10:24:23):  irun -access +rwc array_task.sv 
+s151(11Mar2019:10:31:32):  irun -access +rwc array_task.sv 
+s152(11Mar2019:10:31:36):  irun -sv array_task.sv 
+s153(11Mar2019:10:34:00):  irun -sv array_task.sv 
+s154(11Mar2019:10:36:17):  irun -sv array_task.sv 
+s155(11Mar2019:10:38:12):  irun -sv array_task.sv 
+s156(11Mar2019:10:38:16):  irun -access +rwc array_task.sv 
+s157(11Mar2019:10:39:25):  irun -access +rwc array_task.sv 
+s158(11Mar2019:10:43:24):  irun -access +rwc array_task.sv 
+s159(11Mar2019:10:44:26):  irun -access +rwc array_task.sv 
+s160(11Mar2019:10:45:33):  irun -access +rwc array_task.sv 
+s161(11Mar2019:10:46:30):  irun -access +rwc array_task.sv 
+s162(11Mar2019:10:48:10):  irun -access +rwc array_task.sv 
+s163(11Mar2019:10:49:32):  irun -access +rwc array_task.sv 

@@ -1,7 +1,7 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 11, 2019 at 08:51:47 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 11, 2019 at 10:49:32 IST
 irun
-	-sv
+	-access +rwc
 	array_task.sv
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
@@ -33,6 +33,15 @@ irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+Recompiling... reason: file './array_task.sv' is newer than expected.
+	expected: Mon Mar 11 10:46:28 2019
+	actual:   Mon Mar 11 10:49:30 2019
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -40,31 +49,70 @@ DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
 file: array_task.sv
-    max_val = arr.max(); 
-                    |
-ncvlog: *E,TYCMPAT (array_task.sv,120|20): assignment operator type check failed (expecting datatype compatible with 'int' but found 'queue of int' instead).
-	module worklib.max_array_dy:sv
-		errors: 1, warnings: 0
-    int arr_queue[$];
-      |
-ncvlog: *E,BADDCL (array_task.sv,301|6): identify declaration while expecting a statement.
-    int arr_queue[$];
-                    |
-ncvlog: *E,MISEXX (array_task.sv,301|20): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
-	module worklib.arr_shuffle:sv
-		errors: 2, warnings: 0
-    int data[] = '{15, 2, 9, 6, 1, 7};
-               |
-ncvlog: *W,VARIST (array_task.sv,361|15): Local static variable with initializer requires 'static' keyword.
-    int n = 3;
-          |
-ncvlog: *W,VARIST (array_task.sv,363|10): Local static variable with initializer requires 'static' keyword.
-  function int[$] merge_sort_unique(input int a[$], input int b[$]);
-              |
-ncvlog: *E,EXPFUN (array_task.sv,381|14): expecting a function name [10.3.1(IEEE)].
-	module worklib.merge_sorted_func_unique:sv
-		errors: 1, warnings: 0
+	module worklib.count_unique:sv
+		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 2
-irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 11, 2019 at 08:51:47 IST  (total: 00:00:00)
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		count_unique
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		worklib.count_unique:sv <0x1db75ad1>
+			streams:   2, words:  7515
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		         Instances  Unique
+		Modules:         1       1
+		Registers:       8       8
+		Initial blocks:  2       2
+	Writing initial simulation snapshot: worklib.count_unique:sv
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+Loading snapshot worklib.count_unique:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+Original array : '{2, 5, 2, 3, 5, 2, 3, 7, 6, 3, 4, 8, 10}
+Value 2 appears 3 time(s)
+Value 3 appears 3 time(s)
+Value 4 appears 1 time(s)
+Value 5 appears 2 time(s)
+Value 6 appears 1 time(s)
+Value 7 appears 1 time(s)
+Value 8 appears 1 time(s)
+Value 10 appears 1 time(s)
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 11, 2019 at 10:49:32 IST  (total: 00:00:00)

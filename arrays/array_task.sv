@@ -11,15 +11,17 @@ module dynamic_array_resize;
     d_array1 = new[4]; 
     d_array2 = new[3]; 
         
-    foreach(d_array1[i])  d_array1[i] = i;
+    foreach(d_array1[i]) 
+    d_array1[i] = i;
 
-    foreach(d_array2[j])  d_array2[j] = j;
+    foreach(d_array2[j])  
+    d_array2[j] = j;
 
     $display("d_array1 Values ");
     foreach(d_array1[i])  
     $display("\td_aaray1[%0d] = %0d",i, d_array1[i]);
 
-    $display("d_array2 Values are");
+    $display("d_array2 Values ");
     foreach(d_array2[i])   
     $display("\td_aaray2[%0d] = %0d",i, d_array2[i]);
     
@@ -43,9 +45,10 @@ module dynamic_array_resize;
     
   end
 endmodule
+
  
 
-
+/*
 //Given a queue with potential duplicate values, write code to remove all duplicate elements.
 
 module remove_duplicate_queue;
@@ -77,9 +80,9 @@ module remove_duplicates;
   end
 endmodule
 
-
+*/
 //Write code to reverse the elements in a queue.
-
+/*
 module reverse_queue;
   int q[$] = {1, 2, 3, 4, 5};
 
@@ -91,10 +94,10 @@ module reverse_queue;
     $display("Reversed queue: %p", q);
   end
 endmodule
-
+*/
 
 //Given a static or dynamic array, how would you find the maximum value?
-
+/*
 module max_static_array;
   int arr[5] = '{10, 25, 7, 30, 15};
   int max_val;
@@ -112,19 +115,22 @@ module max_static_array;
   end
 endmodule
 
+
 module max_array_dy;
-  int arr[$] = {12, 45, 8, 33, 21};
+  int array[9] = '{4, 7, 2, 5, 7, 1, 6, 3, 1};
+  int res[$];
 
   initial begin
-    int max_val;
-    max_val = arr.max(); 
-    $display("Maximum value (built-in): %0d", max_val);
+    res = array.min();
+    $display ("min          : %p", res);
+
+    res = array.max();
+    $display ("max          : %p", res);
   end
 endmodule
-
-
+*/
 //Describe how you would use a queue to implement a FIFO (First-In-First-Out) buffer.
-
+/*
 module fifo_queue;
 
   int q[$]; 
@@ -150,16 +156,17 @@ module fifo_using_queue;
 
   initial begin
     q = {10, 20, 30, 40, 50};
-
+    $display("Queue = %p", q);
+    
     foreach(q[i]) begin
       $display("%0d", q.pop_front());
     end
   end
 
 endmodule
-
+*/
 //Implement a stack (Last-In-First-Out behavior) using a queue.
-
+/*
 module lifo_queue;
 
   int q[$]; 
@@ -185,9 +192,9 @@ module lifo_queue1;
 
   initial begin
     
-    q.push_front(10);
-    q.push_front(20);
-    q.push_front(30);
+    q.push_front(1);
+    q.push_front(2);
+    q.push_front(3);
     $display("Queue = %p", q);
     
 
@@ -204,6 +211,8 @@ module lifo_using_queue;
 
   initial begin
     q = {10, 20, 30, 40, 50};
+    $display("Queue = %p", q);
+    
 
     foreach(q[i]) begin
       $display("%0d", q.pop_back());
@@ -211,10 +220,10 @@ module lifo_using_queue;
   end
 
 endmodule
-
+*/
 
 //Write code to concatenate two dynamic arrays.
-
+/*
 module concat_dynamic_arrays;
   int arr1[$] = {1, 2, 3};
   int arr2[$] = {4, 5, 6};
@@ -230,8 +239,9 @@ module concat_dynamic_arrays;
   end
 endmodule
 
-
+*/
 //Given an array of integers, copy only the even numbers into a new array.
+/*
 module copy_even_numbers_compact;
   int arr[$] = {1, 2, 3, 4, 5, 6};
   int even_arr[$];
@@ -242,15 +252,15 @@ module copy_even_numbers_compact;
     foreach (arr[i]) if (arr[i] % 2 == 0) 
     even_arr.push_back(arr[i]);
 
-    $display("Even numbers array (compact): %p", even_arr);
+    $display("Even numbers array : %p", even_arr);
   end
-endmodule
+endmodule */
 
 //Write a code snippet to remove all elements from a dynamic array that are less than a specified threshold.
-
+/*
 module remove_below_threshold;
-  int arr[$] = {7, 15, 2, 18, 9};
-  int threshold = 10;
+  int arr[$] = {7, 15, 2, 18, 9, 11};
+  int threshold = 15;
 
   initial begin
     $display("Original array: %p", arr);
@@ -263,51 +273,78 @@ module remove_below_threshold;
     $display(" after removing  < %0d: %p", threshold, arr);
   end
 endmodule
-
-// Count the number of times each unique element appears in a dynamic array.
-module count_unique;
-  int arr[$] = {2, 5, 2, 3, 5, 2, 3, 7};
-  int count[$]; 
+*/
+/*
+module remove_below_threshold1;
+  int arr[$] = '{3, 35, 6, 28, 8, 14};
+  int threshold = 10;
 
   initial begin
     $display("Original array: %p", arr);
 
-    foreach (arr[i]) begin
-      count[arr[i]]++;  
+    for (int i = arr.size()-1; i >= 0; i--) begin
+      if (arr[i] < threshold)
+        arr.delete(i);
     end
 
-    foreach (count[key]) begin
-      $display("Element %0d appears %0d time(s)", key, count[key]);
+    $display("After removing < %0d: %p", threshold, arr);
+  end
+endmodule
+*/
+
+// Count the number of times each unique element appears in a dynamic array.
+/*
+module count_unique;
+  int arr[$] = '{2, 5, 2, 3, 5, 2, 3, 7, 6, 3, 4, 8, 10};
+  int uniq[$];
+  int i, j;               // declare loop variables here
+  int value, cnt;         // declare count variables here
+
+  initial begin
+    $display("Original array : %p", arr);
+
+    arr.sort();
+
+    uniq = arr.unique();
+
+    foreach (uniq[i]) begin
+      value = uniq[i];   
+      cnt = 0;          
+
+      foreach(arr[j]) begin
+        if(arr[j] == value)
+          cnt++;
+      end
+
+      $display("Value %0d appears %0d time(s)", value, cnt);
     end
   end
 endmodule
-
+*/
 // Implement a function to shuffle the elements of a queue randomly.
+/*
+module shuffle_queue;
 
-module arr_shuffle;
-  int arr[8] = '{5, 6, 9, 2, 3, 4, 6, 10};
-  int que[$] = {5, 6, 9, 2, 3, 4, 6, 10};
+  int q[$] = '{5, 6, 9, 2, 3, 4, 10};
 
-  function void shuffle_method(ref int q[$]);
-    q.shuffle(); 
+  function int[$] shuffle_data(input int q_in[$]);
+    int temp[$];
+    temp = q_in;   
+    temp.shuffle(); 
+    return temp;   
   endfunction
 
   initial begin
-    $display("Original queue: %p", que);
-    shuffle_method(que);
-    $display("Shuffled queue: %p", que);
+    $display("Original Queue = %p", q);
 
-    // If you want to shuffle arr, first copy to a queue
-    int arr_queue[$];
-    arr_queue = arr;
-    $display("Original arr copy as queue: %p", arr_queue);
-    
-    shuffle_method(arr_queue);
-    $display("Shuffled arr copy as queue: %p", arr_queue);
+    q = shuffle_data(q); 
+
+    $display("Shuffled Queue = %p", q);
   end
+
 endmodule
-
-
+*/
+/*
 module shuffle_queue;
   int q[$] = {1, 2, 3, 4, 5, 6};
 
@@ -336,19 +373,17 @@ module queue_shiffle;
     $display("After :\t %p", queue_1);
   end
 endmodule
-
-
+*/
 // Write a function that returns the smallest *n* elements from a dynamic array.
-
+/*
 module smallest_n_element;
 
 function void get_smallest_n(input int arr[], input int n, output int result[$]);
 
     int temp[]; 
     temp = arr; 
-    
     temp.sort(); 
-    
+   
     if (n > temp.size())
       n = temp.size();
     
@@ -356,21 +391,22 @@ function void get_smallest_n(input int arr[], input int n, output int result[$])
       result.push_back(temp[i]);
   endfunction
 
+initial begin
+  int data[];   
+  int smallest[$];
+  int n;        
+  data = '{15, 2, 9, 6, 1, 7};   
+  n = 3;                         
 
-  initial begin
-    int data[] = '{15, 2, 9, 6, 1, 7};
-    int smallest[$];
-    int n = 3;
+  get_smallest_n(data, n, smallest);
 
-    get_smallest_n(data, n, smallest);
-
-    $display("Original array: %p", data);
-    $display("Smallest %0d elements: %p", n, smallest);
-  end
-
+  $display("Original array: %p", data);
+  $display("Smallest %0d elements: %p", n, smallest);
+end
+  
 endmodule
-
-
+*/
+/*
 // Given two sorted dynamic arrays, write a function to merge them into a single sorted array
 
 module merge_sorted_func_unique;
@@ -378,25 +414,28 @@ module merge_sorted_func_unique;
   int arr2[$] = '{2, 4, 5, 6, 9};
   int merged_unique[$];
 
-  function int[$] merge_sort_unique(input int a[$], input int b[$]);
-    int temp[$];
-
-    temp = a;
-    foreach (b[i]) temp.push_back(b[i]);
-
-    temp.sort();
-
-    temp.unique();  // removes duplicate 
-    return temp; // return the sorted unique array
+  // Function merges two sorted arrays and removes duplicates
+  function void merge_sort_unique(
+      input  int a[$],
+      input  int b[$],
+      output int result[$]
+  );
+    result = a;                 // Copy arr1
+    foreach (b[i]) 
+      result.push_back(b[i]);   // Append arr2 elements
+    
+    result.sort();              // Sort the combined array
+    result = result.unique();   // Remove duplicates and reassign
   endfunction
 
   initial begin
     $display("Array 1: %p", arr1);
     $display("Array 2: %p", arr2);
 
-    merged_unique = merge_sort_unique(arr1, arr2);
+    merge_sort_unique(arr1, arr2, merged_unique);
 
     $display("Merged Unique Sorted Array: %p", merged_unique);
   end
 endmodule
 
+*/
