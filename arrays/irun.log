@@ -1,8 +1,8 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 05, 2019 at 03:24:08 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 11, 2019 at 08:28:22 IST
 irun
 	-access +rwc
-	at_arry.sv
+	array_task.sv
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -27,9 +27,6 @@ irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-Recompiling... reason: file './fixed_size_array.sv' is newer than expected.
-	expected: Mon Mar  4 16:00:18 2019
-	actual:   Tue Mar  5 02:11:24 2019
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -42,12 +39,89 @@ ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-file: at_arry.sv
-    foreach(a_array[i]) $display("\ta_array[%0d] \t = %0d",i,a_array[i]);
-                    |
-ncvlog: *E,FEWCAA (at_arry.sv,19|20): Foreach illegal for wildcard index of associative array.
-	module worklib.associative_array:sv
+file: array_task.sv
+    q = unique q; // remove all duplicate 
+             |
+ncvlog: *E,ILLPRI (array_task.sv,57|13): illegal expression primary [4.2(IEEE)].
+	module worklib.remove_duplicate_queue:sv
 		errors: 1, warnings: 0
-ncvlog: *F,NOTOPL: no top-level unit found, must have recursive instances.
-irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 2).
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 05, 2019 at 03:24:08 IST  (total: 00:00:00)
+    int max_val = arr.max(); 
+                |
+ncvlog: *W,VARIST (array_task.sv,119|16): Local static variable with initializer requires 'static' keyword.
+    int max_val = arr.max(); 
+                        |
+ncvlog: *E,TYCMPAT (array_task.sv,119|24): assignment operator type check failed (expecting datatype compatible with 'int' but found 'queue of int' instead).
+	module worklib.max_array_dy:sv
+		errors: 1, warnings: 1
+    $display("%0d", q.push_back(10)); 
+                              |
+ncvlog: *E,NOTFXX (array_task.sv,133|30): Expecting a function name [10.3.3(IEEE)].
+    $display("%0d", q.push_back(20)); 
+                              |
+ncvlog: *E,NOTFXX (array_task.sv,134|30): Expecting a function name [10.3.3(IEEE)].
+    $display("%0d", q.push_back(30)); 
+                              |
+ncvlog: *E,NOTFXX (array_task.sv,135|30): Expecting a function name [10.3.3(IEEE)].
+	module worklib.fifo_queue:sv
+		errors: 3, warnings: 0
+    $display("%0d", q.push_back(10)); 
+                              |
+ncvlog: *E,NOTFXX (array_task.sv,167|30): Expecting a function name [10.3.3(IEEE)].
+    $display("%0d", q.push_back(20)); 
+                              |
+ncvlog: *E,NOTFXX (array_task.sv,168|30): Expecting a function name [10.3.3(IEEE)].
+    $display("%0d", q.push_back(30)); 
+                              |
+ncvlog: *E,NOTFXX (array_task.sv,169|30): Expecting a function name [10.3.3(IEEE)].
+	module worklib.lifo_queue:sv
+		errors: 3, warnings: 0
+    $display("%0d", q.push_front(10)); 
+                               |
+ncvlog: *E,NOTFXX (array_task.sv,185|31): Expecting a function name [10.3.3(IEEE)].
+    $display("%0d", q.push_front(20)); 
+                               |
+ncvlog: *E,NOTFXX (array_task.sv,186|31): Expecting a function name [10.3.3(IEEE)].
+    $display("%0d", q.push_front(30)); 
+                               |
+ncvlog: *E,NOTFXX (array_task.sv,187|31): Expecting a function name [10.3.3(IEEE)].
+	module worklib.lifo_queue1:sv
+		errors: 3, warnings: 0
+	module worklib.lifo_using_queue:sv
+		errors: 0, warnings: 0
+	module worklib.concat_dynamic_arrays:sv
+		errors: 0, warnings: 0
+	module worklib.copy_even_numbers_compact:sv
+		errors: 0, warnings: 0
+	module worklib.remove_below_threshold:sv
+		errors: 0, warnings: 0
+	module worklib.count_unique:sv
+		errors: 0, warnings: 0
+    int arr_queue[$] = arr;
+      |
+ncvlog: *E,BADDCL (array_task.sv,297|6): identify declaration while expecting a statement.
+	module worklib.arr_shuffle:sv
+		errors: 1, warnings: 0
+	module worklib.shuffle_queue:sv
+		errors: 0, warnings: 0
+	module worklib.queue_shiffle:sv
+		errors: 0, warnings: 0
+    int data[] = '{15, 2, 9, 6, 1, 7};
+               |
+ncvlog: *W,VARIST (array_task.sv,355|15): Local static variable with initializer requires 'static' keyword.
+    int n = 3;
+          |
+ncvlog: *W,VARIST (array_task.sv,357|10): Local static variable with initializer requires 'static' keyword.
+      result.push_back(temp[i]);
+                     |
+ncvlog: *E,QAANBI (array_task.sv,350|21): This is not a valid built in method name for this object. [SystemVerilog].
+	module worklib.smallest_n_element:sv
+		errors: 1, warnings: 2
+  function int[$] merge_sort_unique(input int a[$], input int b[$]);
+              |
+ncvlog: *E,EXPFUN (array_task.sv,375|14): expecting a function name [10.3.1(IEEE)].
+	module worklib.merge_sorted_func_unique:sv
+		errors: 1, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 11, 2019 at 08:28:22 IST  (total: 00:00:00)
