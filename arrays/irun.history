@@ -83,3 +83,16 @@ s82(05Mar2019:03:24:08):  irun -access +rwc at_arry.sv
 s83(11Mar2019:08:09:47):  irun -access +rwc array_task.sv 
 s84(11Mar2019:08:12:51):  irun -access +rwc array_task.sv 
 s85(11Mar2019:08:28:22):  irun -access +rwc array_task.sv 
+s86(11Mar2019:08:37:52):  irun -access +rwc array_task.sv 
+s87(11Mar2019:08:39:34):  irun -access +rwc array_task.sv 
+s88(11Mar2019:08:40:11):  irun -access +rwc array_task.sv 
+s89(11Mar2019:08:40:47):  irun -sv array_task.sv 
+s90(11Mar2019:08:42:04):  irun -sv array_task.sv 
+s91(11Mar2019:08:43:10):  irun -sv array_task.sv 
+s92(11Mar2019:08:43:24):  irun -sv array_task.sv 
+s93(11Mar2019:08:44:45):  irun -sv array_task.sv 
+s94(11Mar2019:08:45:40):  irun -sv array_task.sv 
+s95(11Mar2019:08:46:47):  irun -sv array_task.sv 
+s96(11Mar2019:08:48:25):  irun -sv array_task.sv 
+s97(11Mar2019:08:49:41):  irun -sv array_task.sv 
+s98(11Mar2019:08:51:47):  irun -sv array_task.sv 

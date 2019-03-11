@@ -2,6 +2,5 @@
 // File created by:  irun
 // Do not modify this file
 //
--access
-+rwc
+-sv
 array_task.sv

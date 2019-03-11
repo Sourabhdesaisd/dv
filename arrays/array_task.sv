@@ -54,7 +54,7 @@ module remove_duplicate_queue;
   initial begin
     $display("Original queue: %p", q);
 
-    q = unique q; // remove all duplicate 
+    q = q.unique; // remove all duplicate 
 
     $display("after removing duplicates: %p", q);
   end
@@ -116,7 +116,8 @@ module max_array_dy;
   int arr[$] = {12, 45, 8, 33, 21};
 
   initial begin
-    int max_val = arr.max(); 
+    int max_val;
+    max_val = arr.max(); 
     $display("Maximum value (built-in): %0d", max_val);
   end
 endmodule
@@ -130,9 +131,10 @@ module fifo_queue;
 
   initial begin
     
-    $display("%0d", q.push_back(10)); 
-    $display("%0d", q.push_back(20)); 
-    $display("%0d", q.push_back(30)); 
+    q.push_back(10);
+    q.push_back(20);
+    q.push_back(30);
+    $display("Queue = %p", q);
     
 
     $display("%0d", q.pop_front()); 
@@ -164,9 +166,10 @@ module lifo_queue;
 
   initial begin
     
-    $display("%0d", q.push_back(10)); 
-    $display("%0d", q.push_back(20)); 
-    $display("%0d", q.push_back(30)); 
+    q.push_back(10);
+    q.push_back(20);
+    q.push_back(30);
+    $display("Queue = %p", q);
     
 
     $display("%0d", q.pop_back()); 
@@ -182,9 +185,10 @@ module lifo_queue1;
 
   initial begin
     
-    $display("%0d", q.push_front(10)); 
-    $display("%0d", q.push_front(20)); 
-    $display("%0d", q.push_front(30)); 
+    q.push_front(10);
+    q.push_front(20);
+    q.push_front(30);
+    $display("Queue = %p", q);
     
 
     $display("%0d", q.pop_front()); 
@@ -294,7 +298,8 @@ module arr_shuffle;
     $display("Shuffled queue: %p", que);
 
     // If you want to shuffle arr, first copy to a queue
-    int arr_queue[$] = arr;
+    int arr_queue[$];
+    arr_queue = arr;
     $display("Original arr copy as queue: %p", arr_queue);
     
     shuffle_method(arr_queue);
@@ -337,7 +342,8 @@ endmodule
 
 module smallest_n_element;
 
-  function void get_smallest_n(input int arr[], input int n, output int result[]);
+function void get_smallest_n(input int arr[], input int n, output int result[$]);
+
     int temp[]; 
     temp = arr; 
     
