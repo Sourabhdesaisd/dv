@@ -1,7 +1,7 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 12, 2019 at 03:56:14 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 16, 2019 at 02:47:04 IST
 irun
-	-access +rwc
+	-sv
 	array_task.sv
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
@@ -28,8 +28,8 @@ DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
 Recompiling... reason: file './array_task.sv' is newer than expected.
-	expected: Mon Mar 11 10:49:30 2019
-	actual:   Tue Mar 12 03:56:11 2019
+	expected: Sat Mar 16 02:27:01 2019
+	actual:   Sat Mar 16 02:47:03 2019
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -42,6 +42,9 @@ ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+file: array_task.sv
+	module worklib.count_unique:sv
+		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 2
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
@@ -65,31 +68,45 @@ ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/ho
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
-		max_static_array
-		max_array_dy
+		count_unique
 ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		worklib.count_unique:sv <0x6d6363f5>
+			streams:   2, words:  7050
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		         Instances  Unique
-		Modules:         2       2
-		Registers:       5       5
-		Initial blocks:  4       4
-	Writing initial simulation snapshot: worklib.max_static_array:sv
+		Modules:         1       1
+		Registers:       8       8
+		Initial blocks:  2       2
+	Writing initial simulation snapshot: worklib.count_unique:sv
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-Loading snapshot worklib.max_static_array:sv .................... Done
+Loading snapshot worklib.count_unique:sv .................... Done
 ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
 ncsim> run
-Maximum value in static array: 30
-min          : '{1}
-max          : '{7}
+Original array : '{2, 5, 2, 3, 5, 2, 3, 7, 6, 3, 4, 8, 10}
+Value 2 appears 3 time(s)
+Value 3 appears 3 time(s)
+Value 4 appears 1 time(s)
+Value 5 appears 2 time(s)
+Value 6 appears 1 time(s)
+Value 7 appears 1 time(s)
+Value 8 appears 1 time(s)
+Value 10 appears 1 time(s)
 ncsim: *W,RNQUIE: Simulation is complete.
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 12, 2019 at 03:56:16 IST  (total: 00:00:02)
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 16, 2019 at 02:47:05 IST  (total: 00:00:01)

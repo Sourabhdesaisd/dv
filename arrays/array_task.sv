@@ -46,7 +46,7 @@ module dynamic_array_resize;
   end
 endmodule
 
- */
+*/
 
 /*
 //Given a queue with potential duplicate values, write code to remove all duplicate elements.
@@ -98,7 +98,7 @@ endmodule
 
 //Given a static or dynamic array, how would you find the maximum value?
 
-module max_static_array;
+/*module max_static_array;
   int arr[5] = '{10, 25, 7, 30, 15};
   int max_val;
 
@@ -127,7 +127,7 @@ module max_array_dy;
     res = array.max();
     $display ("max          : %p", res);
   end
-endmodule
+endmodule */
 
 //Describe how you would use a queue to implement a FIFO (First-In-First-Out) buffer.
 /*

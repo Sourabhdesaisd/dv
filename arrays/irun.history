@@ -162,3 +162,5 @@ s161(11Mar2019:10:46:30):  irun -access +rwc array_task.sv
 s162(11Mar2019:10:48:10):  irun -access +rwc array_task.sv 
 s163(11Mar2019:10:49:32):  irun -access +rwc array_task.sv 
 s164(12Mar2019:03:56:14):  irun -access +rwc array_task.sv 
+s165(16Mar2019:02:27:38):  irun -sv array_task.sv 
+s166(16Mar2019:02:47:05):  irun -sv array_task.sv 
